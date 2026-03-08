@@ -1,0 +1,28 @@
+@use 'styles/tokens' as *;
+
+.wo-page {
+  width: 1440px;
+  min-height: 1024px;
+  background: #ffffff;
+  padding-top: 95px;
+  padding-left: 101px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wo-title {
+  font-family: var(--wo-font-family);
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.2px;
+  color: #0f172a;
+  margin: 0;
+}
+
+// Place timescale control so LEFT segment is at (101px, 155px) from page frame.
+// .wo-page has padding-top: 95px, padding-left: 101px → margin-top: 60px for Y=155.
+.wo-timescale-wrap {
+  margin-top: 60px;
+}

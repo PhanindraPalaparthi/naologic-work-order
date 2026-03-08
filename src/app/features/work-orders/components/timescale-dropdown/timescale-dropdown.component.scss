@@ -1,0 +1,132 @@
+// Timescale dropdown – pixel-perfect from Nao Design System (inspector values)
+
+.timescale-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.timescale-dropdown__control {
+  display: inline-flex;
+  height: 25px;
+  box-shadow: 0 2px 8px rgba(17, 24, 39, 0.1);
+  border-radius: 5px;
+}
+
+// LEFT segment (Timescale) – Screenshot 3/4
+.timescale-dropdown__label {
+  width: 75px;
+  height: 25px;
+  background: rgba(241, 243, 248, 0.75);
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: 'Circular Std', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #7c86a2;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+// RIGHT segment (Month button) – Screenshot 8/9
+.timescale-dropdown__value {
+  width: 71px;
+  height: 25px;
+  background: #ffffff;
+  border-radius: 0 5px 5px 0;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// Selected value text – Screenshot 10/11
+.timescale-dropdown__valueText {
+  font-family: 'Circular Std', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  color: rgba(62, 64, 219, 1);
+  width: 40px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+}
+
+// Chevron – wide V, vertically centered in Month button, darker grey-blue
+.timescale-dropdown__chevron {
+  width: 5px;
+  height: 8.47px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  svg {
+    width: 5px;
+    height: 8.47px;
+    display: block;
+  }
+}
+
+// Dropdown menu – Screenshot 1/2/5/6/7
+.timescale-dropdown__menu {
+  position: absolute;
+  left: 0;
+  top: calc(25px + 6px);
+  z-index: 1000;
+  min-width: 146px;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 8px 18px rgba(17, 24, 39, 0.12);
+  border: 1px solid #eef1f7;
+  padding: 8px 0;
+  box-sizing: border-box;
+}
+
+.timescale-dropdown__item {
+  width: 100%;
+  min-height: 28px;
+  height: 28px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  font-family: 'Circular Std', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #1f2430;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    outline: 2px solid rgba(62, 64, 219, 1);
+    outline-offset: -2px;
+  }
+
+  &:focus {
+    outline: 2px solid rgba(62, 64, 219, 1);
+    outline-offset: -2px;
+  }
+
+  &.is-selected {
+    color: rgba(62, 64, 219, 1);
+    font-weight: 500;
+  }
+}

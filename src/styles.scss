@@ -1,0 +1,68 @@
+@use 'styles/tokens';
+
+// Circular Std – local woff2 files in src/assets/fonts/
+// Add: CircularStd-Book.woff2, CircularStd-Medium.woff2, CircularStd-Bold.woff2
+@font-face {
+  font-family: 'Circular Std';
+  src: url('./assets/fonts/CircularStd-Book.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Circular Std';
+  src: url('./assets/fonts/CircularStd-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Circular Std';
+  src: url('./assets/fonts/CircularStd-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Base
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--wo-font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// ng-select theme overrides (no native select look – custom dropdown styling)
+.ng-select {
+  .ng-select-container {
+    min-height: 40px;
+    border-radius: var(--wo-radius-md);
+    border: 1px solid var(--wo-color-border);
+    font-family: var(--wo-font-family);
+  }
+
+  &.ng-select-focused .ng-select-container {
+    border-color: var(--wo-color-primary);
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+  }
+
+  .ng-dropdown-panel {
+    border-radius: var(--wo-radius-md);
+    border: 1px solid var(--wo-color-border);
+    font-family: var(--wo-font-family);
+  }
+
+  .ng-option {
+    padding: var(--wo-spacing-sm) var(--wo-spacing-md);
+  }
+
+  .ng-option.ng-option-selected,
+  .ng-option.ng-option-marked {
+    background-color: rgba(37, 99, 235, 0.08);
+    color: var(--wo-color-primary);
+  }
+}
